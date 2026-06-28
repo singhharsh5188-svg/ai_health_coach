@@ -106,7 +106,7 @@ class DietPlanScreen extends StatelessWidget {
       dinner = 'Balanced Dinner';
     }
 
-    List<String> days = [
+    final days = [
       '',
       'Monday',
       'Tuesday',
@@ -114,7 +114,7 @@ class DietPlanScreen extends StatelessWidget {
       'Thursday',
       'Friday',
       'Saturday',
-      'Sunday'
+      'Sunday',
     ];
 
     return Scaffold(
@@ -135,9 +135,7 @@ class DietPlanScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 10),
-
               Text(
                 '📅 ${days[today]}',
                 style: const TextStyle(
@@ -145,9 +143,7 @@ class DietPlanScreen extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-
               const SizedBox(height: 25),
-
               Card(
                 child: ListTile(
                   leading: const Text('🌅'),
@@ -155,7 +151,6 @@ class DietPlanScreen extends StatelessWidget {
                   subtitle: Text(breakfast),
                 ),
               ),
-
               Card(
                 child: ListTile(
                   leading: const Text('🍛'),
@@ -163,7 +158,6 @@ class DietPlanScreen extends StatelessWidget {
                   subtitle: Text(lunch),
                 ),
               ),
-
               Card(
                 child: ListTile(
                   leading: const Text('🌙'),
